@@ -1,8 +1,8 @@
 # Linux & Bash — OSCP Notes
 
 > **Track:** Mastering OSCP
-> **Section:** Linux & Bash
-> **Covers:** 001 – Linux Fundamentals · 002 – Advanced Linux Administration
+> **Section:** Linux P1
+> **Covers:** 001 – Linux Fundamentals
 
 ---
 
