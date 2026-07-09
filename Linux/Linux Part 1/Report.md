@@ -1,4 +1,4 @@
-# Linux & Bash — OSCP Notes
+# Linux — OSCP Notes
 
 > **Track:** Mastering OSCP
 > **Section:** Linux P1
