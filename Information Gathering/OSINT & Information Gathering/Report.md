@@ -58,7 +58,7 @@ The starting point for almost any engagement is simply searching the company on 
 Every large company owns an **ASN (Autonomous System Number)** — a unique identifier tying a block of IP addresses to that organization. Once you have the ASN, you effectively have a map of the company's servers, subdomains, and infrastructure.
 
 ```
-Example: Swisscom Ltd → AS3303
+Example: test.com → AS1111
 ```
 
 Find a company's ASN:
