@@ -1,4 +1,4 @@
-# Information Gathering — SMB Enumeration
+# Information Gathering — SMB Enumeration & Exploitation
 
 > **Track:** Mastering OSCP
 > **Section:** Information Gathering — 002
