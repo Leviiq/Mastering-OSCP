@@ -165,10 +165,10 @@ When connecting, the server responds with code **220** along with a banner, whic
 ### Example Session
 
 ```
-$ ftp 10.129.14.136
-Connected to 10.129.14.136.
+$ ftp 10.10.10.10
+Connected to 10.10.10.10.
 220 "Welcome to the HTB Academy vsFTP service."
-Name (10.129.14.136:cry0l1t3): anonymous
+Name (10.10.10.10:cry0l1t3): anonymous
 
 230 Login successful.
 Remote system type is UNIX.
@@ -216,7 +216,7 @@ ftp> exit
 ### Downloading everything at once
 
 ```bash
-wget -m --no-passive ftp://anonymous:anonymous@10.129.14.136
+wget -m --no-passive ftp://anonymous:anonymous@10.10.10.10
 ```
 
 `wget -m` mirrors the entire directory structure recursively — useful for grabbing an anonymous FTP share in one shot rather than pulling files one at a time.
@@ -252,7 +252,7 @@ sudo nmap --script-updatedb
 ### Example Scan
 
 ```bash
-sudo nmap -sV -p21 -sC -A 10.129.14.136
+sudo nmap -sV -p21 -sC -A 10.10.10.10
 ```
 
 ```
@@ -285,7 +285,7 @@ PORT   STATE SERVICE VERSION
 ### Tracing Script Behavior
 
 ```bash
-sudo nmap -sV -p21 -sC -A 10.129.14.136 --script-trace
+sudo nmap -sV -p21 -sC -A 10.10.10.10 --script-trace
 ```
 
 ```
