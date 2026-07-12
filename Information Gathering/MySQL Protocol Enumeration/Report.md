@@ -109,12 +109,12 @@ There are plenty of reasons a MySQL server might be reachable from an external n
 ### Scanning MySQL
 
 ```bash
-sudo nmap 10.129.14.128 -sV -sC -p3306 --script mysql*
+sudo nmap 10.10.10.10 -sV -sC -p3306 --script mysql*
 ```
 
 ```
 Starting Nmap 7.80 ( https://nmap.org ) at 2021-09-21 00:53 CEST
-Nmap scan report for 10.129.14.128
+Nmap scan report for 10.10.10.10
 Host is up (0.00021s latency).
 
 PORT     STATE SERVICE     VERSION
@@ -159,7 +159,7 @@ MAC Address: 00:00:00:00:00:00 (VMware)
 As with every scan, it's important to treat results with healthy skepticism and manually confirm what a script reports, since false positives happen. This scan is a textbook example: the `mysql-brute`/`mysql-enum` output claims the `root` account has an **empty** password — but in reality, the target server uses a **fixed, non-empty** password. We can verify that directly:
 
 ```bash
-mysql -u root -h 10.129.14.132
+mysql -u root -h 10.10.10.10
 ```
 ```
 ERROR 1045 (28000): Access denied for user 'root'@'10.129.14.1' (using password: NO)
@@ -174,7 +174,7 @@ This confirms the automated result was a false positive.
 If we use a password we've guessed or discovered through prior research, we can log in and start executing commands:
 
 ```bash
-mysql -u root -pP4SSw0rd -h 10.129.14.128
+mysql -u root -pP4SSw0rd -h 10.10.10.10
 ```
 
 > ⚠️ There must be **no space** between the `-p` flag and the password.
@@ -253,7 +253,7 @@ mysql> select host, unique_users from host_summary;
 +-------------+--------------+
 | host        | unique_users |
 +-------------+--------------+
-| 10.129.14.1 | 1            |
+| 10.10.10.10 | 1            |
 +-------------+--------------+
 ```
 
