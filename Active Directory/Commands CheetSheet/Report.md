@@ -1,4 +1,4 @@
-# Active Directory — Commands Only Cheatsheet
+# Active Directory — Commands Cheatsheet
 
 ---
 
